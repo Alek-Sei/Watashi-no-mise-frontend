@@ -1,1 +1,24 @@
-<p>product-list works!</p>
+<div class="container">
+  <h1 class="mt-3 mb-3">Products</h1>
+  <table class="table table-striped">
+    <thead class="table-dark">
+    <tr>
+      <th></th>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th class="text-right">Listed on</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempProduct of products">
+      <td><img src="{{tempProduct.imageUrl}}" alt="book image" height="50px"></td>
+      <td>{{tempProduct.name}}</td>
+      <td>{{tempProduct.unitPrice | currency: 'EUR'}}</td>
+      <td>{{tempProduct.description | slice:0:60}}...</td>
+      <td class="text-right">{{tempProduct.dateCreated | date: 'dd/MM/yyyy'}}
+        at: {{tempProduct.dateCreated | date: 'HH:mm'}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
