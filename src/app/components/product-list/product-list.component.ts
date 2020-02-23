@@ -1,7 +1,7 @@
 /* tslint:disable:no-trailing-whitespace */
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from '../../services/product.service';
-import {Product} from '../../common/product';
+import {ProductService} from '../../core/services/product.service';
+import {Product} from '../../core/common/product';
 
 @Component({
   selector: 'app-product-list',
