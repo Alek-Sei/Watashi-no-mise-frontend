@@ -15,6 +15,7 @@ import { FeaturedProductsComponent } from './components/featured-products/featur
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { PromoComponent } from './components/header/promo/promo.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ShopComponent } from './components/shop/shop.component';
     FeaturedProductsComponent,
     FooterComponent,
     HeaderComponent,
-    ShopComponent
+    ShopComponent,
+    PromoComponent
   ],
   imports: [
     BrowserModule,
