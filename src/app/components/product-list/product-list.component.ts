@@ -5,8 +5,8 @@ import {Product} from '../../core/common/product';
 
 @Component({
   selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  templateUrl: './product-grid.component.html',
+  styleUrls: ['./product-grid.component.scss']
 })
 export class ProductListComponent implements OnInit {
 
