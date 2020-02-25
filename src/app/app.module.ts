@@ -1,3 +1,4 @@
+/* tslint:disable:no-trailing-whitespace */
 import { ProductService } from './core/services/product.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,8 +17,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { PromoComponent } from './components/header/promo/promo.component';
+import {RouterModule, Routes} from '@angular/router';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
-
+const routes: Routes = [
+  {path: 'category/:id', component: ProductListComponent},
+  {path: 'category', component: ProductListComponent},
+  {path: 'products', component: ProductListComponent},
+  {path: '', redirectTo: '.products', pathMatch: 'full'}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,9 +39,11 @@ import { PromoComponent } from './components/header/promo/promo.component';
     FooterComponent,
     HeaderComponent,
     ShopComponent,
-    PromoComponent
+    PromoComponent,
+    SidebarComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

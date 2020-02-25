@@ -1,7 +1,23 @@
-<app-promo></app-promo>
+
+<ul class="ml-5 list-unstyled">
+  <li>
+    <a routerLink="/cateogory/1" routerLinkActive="active">Books</a>
+  </li>
+  <li>
+    <a routerLink="/cateogory/2" routerLinkActive="active">Gifts</a>
+  </li>
+  <li>
+    <a routerLink="/cateogory/3" routerLinkActive="active">E-Readers</a>
+  </li>
+  <li>
+    <a routerLink="/cateogory/1" routerLinkActive="active">E-books</a>
+  </li>
+</ul>
+
+
 <div class="container mt-5">
   <div class="row ">
-    <div class="col-md-3 col-sm-6 mb-5" *ngFor="let tempProduct of products">
+    <div class="col-md-4 col-lg-3 col-sm-6 mb-5" *ngFor="let tempProduct of products">
       <div class="middle">
         <img src="assets/images/products/{{ tempProduct.imageUrl }}.jpg" alt="product picture">
       </div>
