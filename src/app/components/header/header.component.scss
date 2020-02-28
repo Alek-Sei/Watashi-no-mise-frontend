@@ -45,3 +45,12 @@
 
 }
 
+.dropdown-item:hover
+{
+  background-color: rgba(205, 147, 177, 0.132);
+}
+
+.dropdown-item.active
+{
+  display: none;
+}

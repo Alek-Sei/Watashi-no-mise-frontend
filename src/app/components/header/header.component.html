@@ -8,20 +8,32 @@
       Watashi no Mise
     </div>
   </a>
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" [routerLink]="'/'" routerLinkActive="active"
-           [routerLinkActiveOptions]="{exact: true}">Home</a>
+          [routerLinkActiveOptions]="{exact: true}">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/shop'" routerLinkActive="active">shop</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Shop
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li *ngFor="let dyanamicProductCategory of productCategories">
+            <a class="dropdown-item" routerLink="/category/{{ dyanamicProductCategory.id }}" routerLinkActive="active-link">
+              {{ dyanamicProductCategory.categoryName }}
+            </a>
+
+          </li>
+
+        </ul>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" [routerLink]="'/about'" routerLinkActive="active">about</a>
       </li>
@@ -33,6 +45,7 @@
       </li>
     </ul>
   </div>
-</nav>
-<router-outlet></router-outlet>
 
+</nav>
+
+<router-outlet></router-outlet>
