@@ -1,4 +1,3 @@
-/* tslint:disable:no-trailing-whitespace */
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../../core/services/product.service';
 import {Product} from '../../core/common/product';
@@ -24,10 +23,10 @@ export class ProductListComponent implements OnInit {
   }
 
   listProducts() {
-    const hasCAtegoryId: boolean = this.route.snapshot.paramMap.has('id');
+    const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
 
 
-    if (hasCAtegoryId) {
+    if (hasCategoryId) {
       this.currentCategoryId = +this.route.snapshot.paramMap.get('id');
     } else {
       this.currentCategoryId = 1;

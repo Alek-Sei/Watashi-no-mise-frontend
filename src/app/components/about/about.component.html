@@ -1,1 +1,19 @@
-<p>about works!</p>
+<h2 class="text-center">About Us</h2>
+
+<div class="panel panel-default">
+
+
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>something</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let page of pages | async">
+                  <td>{{page.content}}</td>
+              </tr>
+          </tbody>
+      </table>
+
+</div>

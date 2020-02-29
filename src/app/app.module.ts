@@ -19,6 +19,8 @@ import { ShopComponent } from './components/shop/shop.component';
 import { PromoComponent } from './components/header/promo/promo.component';
 import {RouterModule, Routes} from '@angular/router';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { PageService } from './core/services/page.service';
+
 
 const routes: Routes = [
   {path: 'category/:id', component: ProductListComponent},
@@ -48,7 +50,7 @@ const routes: Routes = [
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, PageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

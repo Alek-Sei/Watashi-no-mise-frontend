@@ -5,8 +5,8 @@
         <img src="assets/images/products/{{ tempProduct.imageUrl }}.jpg" alt="product picture">
       </div>
       <div class="bottom">
-        <div class="heading">{{ tempProduct.name | slice: 0:27}}...</div>
-        <div class="info">{{ tempProduct.description | slice: 0:50}}...</div>
+        <div class="heading">{{ tempProduct.name | slice: 0:67}}...</div>
+        <div class="info">{{ tempProduct.description | slice: 0:250}}</div>
         <div class="price">{{ tempProduct.unitPrice | currency: 'EUR'}} <span
           class="old-price">{{ tempProduct.unitPrice * 1.2 | currency: 'EUR'}}</span></div>
       </div>

@@ -1,5 +1,4 @@
 import { ProductCategory } from './../common/product-category';
-/* tslint:disable:no-trailing-whitespace */
 import { Product } from '../common/product';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';

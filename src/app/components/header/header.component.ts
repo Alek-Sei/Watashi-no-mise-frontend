@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.listProductCategories();
   }
-
   listProductCategories() {
 
     this.productService.getProductCategories().subscribe(
