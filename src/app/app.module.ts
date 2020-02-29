@@ -20,9 +20,11 @@ import { PromoComponent } from './components/header/promo/promo.component';
 import {RouterModule, Routes} from '@angular/router';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PageService } from './core/services/page.service';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'category/:id', component: ProductListComponent},
   {path: 'category', component: ProductListComponent},
   {path: 'products', component: ProductListComponent},
@@ -42,7 +44,8 @@ const routes: Routes = [
     HeaderComponent,
     ShopComponent,
     PromoComponent,
-    SidebarComponent
+    SidebarComponent,
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
