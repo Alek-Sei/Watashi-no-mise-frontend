@@ -1,1 +1,14 @@
-<p>contact-us works!</p>
+<div class="container mt-5">
+  <h6 class="text-center">Got a question?!</h6>
+  <h2 class="text-center mb-3">Contact <span class="header-logo-top">
+    <span class="primary-heading-text">私の</span><span class="secondary-heading-text">店</span>
+  </span></h2>
+</div>
+
+<div class="container">
+  <tr *ngFor="let page of pages | async | slice:3:4">
+    {{page.content}}
+  </tr>
+
+</div>
+<app-contact-form></app-contact-form>

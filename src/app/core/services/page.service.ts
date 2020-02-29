@@ -11,15 +11,15 @@ export class PageService {
 
   constructor(private http: HttpClient) { }
 
-  getPage(id: number): Observable<Object> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+  getPage(title: string): Observable<object> {
+    return this.http.get(`${this.baseUrl}/${title}`);
   }
 
-  createPage(page: Object): Observable<Object> {
+  createPage(page: object): Observable<object> {
     return this.http.post(`${this.baseUrl}`, page);
   }
 
-  updatePage(id: number, value: any): Observable<Object> {
+  updatePage(id: number, value: any): Observable<object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 

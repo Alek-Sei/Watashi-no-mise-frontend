@@ -1,9 +1,23 @@
-<div class="container">
-  <h3 class="text-center">CMS Administration</h3>
-  <hr>
-  <a href="admin/pages/add" class="btn btn-success">New Page</a>
-  <div>
+<h2 class="mt-5 text-center">Dynamic Pages</h2>
 
-  </div>
+<div class="panel panel-default">
+
+
+      <table class="table mt-5">
+          <tbody>
+            <tr class="font-weight-bold bg-secondary text-white">
+              <td>Title</td>
+              <td>Page Content</td>
+              <td>Id</td>
+              <td>Slug</td>
+            </tr>
+              <tr *ngFor="let page of pages | async">
+                  <td>{{page.title}}</td>
+                  <td>{{page.content}}</td>
+                  <td>{{page.id}}</td>
+                  <td>{{page.slug}}</td>
+              </tr>
+          </tbody>
+      </table>
 
 </div>

@@ -1,19 +1,74 @@
-<h2 class="text-center">About Us</h2>
-
-<div class="panel panel-default">
+<div class="container">
 
 
-      <table class="table">
-          <thead>
-              <tr>
-                  <th>something</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr *ngFor="let page of pages | async">
-                  <td>{{page.content}}</td>
-              </tr>
-          </tbody>
-      </table>
+  <div class="bg-light">
+    <div class="container py-5">
+      <h3 class="mb-4">Some more dynamic content which is pulled from MySQL</h3>
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-6">
 
+          <p class="lead text-muted mb-0">
+
+            <tr *ngFor="let page of pages | async | slice:1:2">
+              {{page.content}}
+            </tr>
+          </p>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block"><img
+            src="https://www.jing.fm/clipimg/full/60-600609_mr-clipart-team-manager-running-across-finish-line.png"
+            alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-5">
+    <div class="container py-5">
+      <div class="row mb-4">
+        <div class="col-lg-5">
+          <h2 class="display-5 font-weight-light">Java Tallin 8 Leftovers</h2>
+        </div>
+      </div>
+
+      <div class="row text-center">
+
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="face.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Aleksei Skokov</h5><span class="small text-uppercase text-muted">The Me</span>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="face.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Olegs Matvijenko</h5><span class="small text-uppercase text-muted">Vegan</span>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="face.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Kätlin Kuusemäe</h5><span class="small text-uppercase text-muted">The Business Lady</span>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="face.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Tauri Ruut</h5><span class="small text-uppercase text-muted">Big Pirados Guy</span>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-2">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="face.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Roop Khan</h5><span class="small text-uppercase text-muted">The Competitor</span>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-2">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="face.png" alt="" width="100"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Luis Arreaga</h5><span class="small text-uppercase text-muted">Captain America</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
