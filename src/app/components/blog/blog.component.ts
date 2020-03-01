@@ -1,4 +1,8 @@
+import { Blog } from './../../core/common/blog';
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { BlogService } from 'src/app/core/services/blog.service';
 
 @Component({
   selector: 'app-blog',
@@ -6,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-
-  constructor() { }
+  blogs: Observable<Blog[]>;
+  constructor(private blogService: BlogService) {}
 
   ngOnInit() {
+    this.reloadData();
+  }
+
+  reloadData() {
+    this.blogs = this.blogService.getBlogsArticleList();
   }
 
 }

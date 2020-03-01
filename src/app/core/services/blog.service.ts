@@ -11,23 +11,23 @@ export class BlogService {
 
   constructor(private http: HttpClient) { }
 
-  getPage(title: string): Observable<object> {
+  getBlogArticle(title: string): Observable<object> {
     return this.http.get(`${this.baseUrl}/${title}`);
   }
 
-  createPage(blog: object): Observable<object> {
+  createBlogArticle(blog: object): Observable<object> {
     return this.http.post(`${this.baseUrl}`, blog);
   }
 
-  updatePage(id: number, value: any): Observable<object> {
+  updateBlogArticle(id: number, value: any): Observable<object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
-  deletePage(id: number): Observable<any> {
+  deleteBlogArticle(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
 
-  getPagesList(): Observable<any> {
+  getBlogsArticleList(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
 }
