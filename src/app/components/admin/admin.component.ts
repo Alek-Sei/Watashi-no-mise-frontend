@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PageService } from 'src/app/core/services/page.service';
+import { Blog } from 'src/app/core/common/blog';
+import { BlogService } from 'src/app/core/services/blog.service';
 
 @Component({
   selector: 'app-admin',
@@ -11,7 +13,8 @@ import { PageService } from 'src/app/core/services/page.service';
 })
 export class AdminComponent implements OnInit {
   pages: Observable<Page[]>;
-  constructor(private pageService: PageService) {}
+  blogs: Observable<Blog[]>;
+  constructor(private pageService: PageService, private blogService: BlogService) {}
 
   ngOnInit() {
     this.reloadData();
@@ -19,6 +22,7 @@ export class AdminComponent implements OnInit {
 
   reloadData() {
     this.pages = this.pageService.getPagesList();
+    this.blogs = this.blogService.getBlogsArticleList();
   }
 
 }

@@ -1,23 +1,47 @@
-<h2 class="mt-5 text-center">Dynamic Pages</h2>
-
+<h2 class="mt-5 text-center">Page Content</h2>
 <div class="panel panel-default">
+  <table class="table mt-5">
+    <tbody>
+      <tr class="font-weight-bold bg-secondary text-white">
+        <td>Title</td>
+        <td>Page Content</td>
+        <td>Id</td>
+        <td>Slug</td>
+        <td>Action</td>
+      </tr>
+      <tr *ngFor="let page of pages | async">
+        <td>{{page.title}}</td>
+        <td>{{page.content}}</td>
+        <td>{{page.id}}</td>
+        <td>{{page.slug}}</td>
+        <td class="text-center"><a href="/admin/pages/delete/{{page.id}}"><button
+              class="btn btn-danger">Delete</button></a> <br> <a href="/admin/pages/edit/{{page.id}}"><button
+              class="btn btn-success mt-1">Edit</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-
-      <table class="table mt-5">
-          <tbody>
-            <tr class="font-weight-bold bg-secondary text-white">
-              <td>Title</td>
-              <td>Page Content</td>
-              <td>Id</td>
-              <td>Slug</td>
-            </tr>
-              <tr *ngFor="let page of pages | async">
-                  <td>{{page.title}}</td>
-                  <td>{{page.content}}</td>
-                  <td>{{page.id}}</td>
-                  <td>{{page.slug}}</td>
-              </tr>
-          </tbody>
-      </table>
-
+<h2 class="mt-5 text-center">Blog Posts</h2>
+<div class="panel panel-default">
+  <table class="table mt-5">
+    <tbody>
+      <tr class="font-weight-bold bg-secondary text-white">
+        <td>Title</td>
+        <td>Page Content</td>
+        <td>Id</td>
+        <td>Slug</td>
+        <td>Action</td>
+      </tr>
+      <tr *ngFor="let blog of blogs | async">
+        <td>{{blog.title}}</td>
+        <td>{{blog.content}}</td>
+        <td>{{blog.id}}</td>
+        <td>{{blog.slug}}</td>
+        <td class="text-center"><a href="/admin/blogs/delete/{{blog.id}}"><button
+              class="btn btn-danger">Delete</button></a> <br> <a href="/admin/blogs/edit/{{blog.id}}"><button
+              class="btn btn-success mt-1">Edit</button></a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
