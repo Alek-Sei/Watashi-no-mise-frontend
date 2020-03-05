@@ -21,6 +21,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PageService } from './core/services/page.service';
 import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'category/:id', component: ProductListComponent},
   {path: 'category', component: ProductListComponent},
   {path: 'products', component: ProductListComponent},
-  {path: '', redirectTo: '.products', pathMatch: 'full'}
+  {path: '', redirectTo: '.products', pathMatch: 'full'},
+  {path: 'search/:keyword', component: ProductListComponent}
 ];
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ const routes: Routes = [
     ShopComponent,
     PromoComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

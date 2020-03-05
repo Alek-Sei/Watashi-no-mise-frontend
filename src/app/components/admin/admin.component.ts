@@ -12,8 +12,11 @@ import { BlogService } from 'src/app/core/services/blog.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+
+
   pages: Observable<Page[]>;
   blogs: Observable<Blog[]>;
+
   constructor(private pageService: PageService, private blogService: BlogService) {}
 
   ngOnInit() {
