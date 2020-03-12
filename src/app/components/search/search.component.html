@@ -1,13 +1,13 @@
 <form action="">
   <div class="bg-light rounded rounded-pill shadow-sm mb-4">
     <div class="input-group">
-      <input #myInput type="search"
+      <input #searchInput type="search"
       placeholder="Product Search"
       aria-describedby="srch"
         class="form-control border-0 bg-light"
-        (keyup.enter)="doSearch(myInput.value)">
+        (keyup.enter)="doSearch(searchInput.value)">
       <div class="input-group-append">
-        <button id="srch" (click)="doSearch(myInput.value)"
+        <button id="srch" (click)="doSearch(searchInput.value)"
         class="btn btn-link text-primary">
         <i class="fa fa-search"></i></button>
       </div>
