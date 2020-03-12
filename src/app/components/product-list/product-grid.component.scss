@@ -47,3 +47,9 @@
   text-decoration: line-through;
 }
 
+.router-link {
+  color: black !important;
+  text-decoration-color: rgb(189, 97, 123);
+  text-decoration-thickness: .05em;
+  text-underline-offset: 1.5px;
+}

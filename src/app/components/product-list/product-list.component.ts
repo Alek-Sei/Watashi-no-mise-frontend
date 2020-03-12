@@ -15,7 +15,7 @@ export class ProductListComponent implements OnInit {
   searchMode: boolean;
 
   constructor(private productService: ProductService,
-    private route: ActivatedRoute) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(() => {

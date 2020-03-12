@@ -10,11 +10,17 @@ import { map } from 'rxjs/operators';
 })
 export class ProductService {
 
-
   private baseUrl = 'http://localhost:8080/api/products';
   private categoryUrl = 'http://localhost:8080/api/product-category';
 
   constructor(private httpClient: HttpClient) { }
+
+  getProduct(theProductId: number): Observable<Product> {
+
+    const productUrl = `${this.baseUrl}/${theProductId}`;
+
+    return this.httpClient.get<Product>(productUrl);
+  }
 
   getProductList(theCategoryId: number): Observable<Product[]> {
 
@@ -35,11 +41,11 @@ export class ProductService {
     return this.httpClient.get<GetResponseProduct>(searchUrl).pipe(map(response => response._embedded.products));
   }
 
-getProductCategories(): Observable < ProductCategory[] > {
-  return this.httpClient.get<GetResponseProductCategory>(this.categoryUrl).pipe(
-    map(response => response._embedded.productCategory)
-  );
-}
+  getProductCategories(): Observable<ProductCategory[]> {
+    return this.httpClient.get<GetResponseProductCategory>(this.categoryUrl).pipe(
+      map(response => response._embedded.productCategory)
+    );
+  }
 }
 
 interface GetResponseProduct {
