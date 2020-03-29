@@ -1,9 +1,13 @@
 <div class="description-section">
   <div class="container-fluid">
-    <p>Name is below?</p>
+
     <p class="mt-5">
       {{ product.name }}
     </p>
-    <p>Name is above?</p>
+    <div class="price">
+      {{ product.unitPrice | currency: 'EUR' }}
+    </div>
   </div>
+
 </div>
+
